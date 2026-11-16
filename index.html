@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru" data-theme="sage">
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,22 +16,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ---------- Темы ---------- */
-:root, [data-theme="sage"]{
-  --bg:#F3F3EF; --surface:#FFFFFF; --line:#DCDDD6; --text:#232A1F; --muted:#6B7366;
-  --accent:#424C3B; --accent-hover:#333B2D; --on-accent:#FFFFFF; --num:#6B7B62;
-  --hero-bg:#E3E6DE; --hero-text:#232A1F; --hero-muted:#5C6656; --hero-ghost:#232A1F;
-  --chip:#E9EBE4;
-  --dark-bg:#2F3729; --dark-card:#3B4534; --dark-text:#EEF0EA; --dark-muted:#AEB6A5; --dark-line:#4B5643;
-  --bar-before:#C9CEC2; --bar-after:#6B7B62;
-}
-[data-theme="graphite"]{
+/* ---------- Цвета: графит и малина, цифры роста — зеленые ---------- */
+:root{
   --bg:#F5F1EB; --surface:#FFFFFF; --line:#E4DDD3; --text:#1C1A19; --muted:#77706A;
-  --accent:#E4407A; --accent-hover:#C92F66; --on-accent:#FFFFFF; --num:#E4407A;
+  --accent:#E4407A; --accent-hover:#C92F66; --on-accent:#FFFFFF; --num:#6B7B62;
   --hero-bg:#1C1A19; --hero-text:#F5F1EB; --hero-muted:#A9A097; --hero-ghost:#F5F1EB;
   --chip:#EDE7DF;
   --dark-bg:#1C1A19; --dark-card:#2A2725; --dark-text:#F5F1EB; --dark-muted:#A9A097; --dark-line:#3A3633;
-  --bar-before:#D8CFC4; --bar-after:#E4407A;
+  --bar-before:#C9CEC2; --bar-after:#6B7B62;
 }
 
 *{box-sizing:border-box}
@@ -59,11 +51,6 @@ p{margin:0 0 10px}
 .nav a:hover{color:var(--text)}
 .nav .tg{background:var(--accent);color:var(--on-accent);padding:8px 14px;border-radius:999px}
 .nav .tg:hover{background:var(--accent-hover);color:var(--on-accent)}
-.theme{display:flex;gap:6px;align-items:center;padding-left:6px;border-left:1px solid var(--line);margin-left:2px}
-.theme button{width:22px;height:22px;border-radius:50%;border:2px solid transparent;cursor:pointer;padding:0;outline-offset:2px}
-.theme button[aria-pressed="true"]{border-color:var(--text)}
-.theme .sw-sage{background:linear-gradient(135deg,#AEB6A5 50%,#424C3B 50%)}
-.theme .sw-graphite{background:linear-gradient(135deg,#1C1A19 50%,#E4407A 50%)}
 
 /* ---------- Герой ---------- */
 .hero{display:grid;grid-template-columns:1.45fr 1fr;gap:16px;padding-top:20px}
@@ -253,10 +240,6 @@ footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-s
       <a class="hide-m" href="#ai">ИИ</a>
       <a class="hide-m" href="#contacts">Контакты</a>
       <a class="tg" href="https://t.me/EkaterinaAlbertovna" target="_blank" rel="noopener">Telegram ↗</a>
-      <div class="theme" role="group" aria-label="Цветовая гамма">
-        <button class="sw-sage" data-set-theme="sage" aria-pressed="true" title="Гамма «Шалфей»"></button>
-        <button class="sw-graphite" data-set-theme="graphite" aria-pressed="false" title="Гамма «Графит и малина»"></button>
-      </div>
     </nav>
   </div>
 </header>
@@ -596,11 +579,6 @@ footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-s
 
 <script>
 (function(){
-  /* --- Тема --- */
-  var root=document.documentElement, btns=document.querySelectorAll('[data-set-theme]');
-  function setTheme(t){root.setAttribute('data-theme',t);btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.setTheme===t)});try{localStorage.setItem('cv-theme',t)}catch(e){}}
-  try{var saved=localStorage.getItem('cv-theme');if(saved)setTheme(saved)}catch(e){}
-  btns.forEach(function(b){b.addEventListener('click',function(){setTheme(b.dataset.setTheme)})});
 
   /* --- Шапка --- */
   var top=document.getElementById('top');

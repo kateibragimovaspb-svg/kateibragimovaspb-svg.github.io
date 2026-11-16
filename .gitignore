@@ -1,0 +1,5 @@
+# Личные файлы и сборки не публикуем
+*.pdf
+Ibragimova_CV.html
+.DS_Store
+Thumbs.db

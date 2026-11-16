@@ -44,7 +44,7 @@ p{margin:0 0 10px}
 /* ---------- Шапка ---------- */
 .top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
 .top.scrolled{border-color:var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.top .wrap{display:flex;align-items:center;justify-content:flex-end;height:64px;gap:16px}
 .logo{font-weight:600;text-decoration:none;white-space:nowrap}
 .nav{display:flex;align-items:center;gap:22px;font-size:14px}
 .nav a{text-decoration:none;color:var(--muted)}
@@ -231,7 +231,6 @@ footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-s
 
 <header class="top" id="top">
   <div class="wrap">
-    <a class="logo" href="#">Екатерина Ибрагимова</a>
     <nav class="nav" aria-label="Разделы">
       <a class="hide-m" href="#work">Работы</a>
       <a class="hide-m" href="#experience">Опыт</a>
@@ -430,7 +429,7 @@ footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-s
 
     <!-- Хабр -->
     <div class="panel" id="p-habr" role="tabpanel" aria-labelledby="t-habr" hidden>
-      <p class="panel-intro"><strong>Блог Just AI на Хабре:</strong> за третий квартал 2026 подписчиков стало 815 вместо 463 (<span class="hl">+76%</span>), охват материалов — 50,2 тыс. Нахожу темы, работаю с экспертами, пишу и редактирую, выпускаю материалы и распространяю их через Telegram-сообщества</p>
+      <p class="panel-intro">Нахожу темы, работаю с экспертами, пишу и редактирую, выпускаю материалы и распространяю их через Telegram-сообщества</p>
       <div class="mini mini-wide" data-b="463" data-a="815"><div class="mini-head"><span>Подписчики блога за третий квартал 2026</span><b>+76%</b></div><div class="mini-row"><small>Было</small><div class="mini-track"><div class="bar">463</div></div></div><div class="mini-row"><small>Стало</small><div class="mini-track"><div class="bar after">815</div></div></div></div>
       <div class="grid3" id="habr-grid"></div>
       <p class="note">Цифры на 13 ноября 2026: охват · плюсы · в закладках</p>
@@ -449,9 +448,7 @@ footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-s
         </div>
         <div class="kpis">
           <div class="kpi"><b>38 тыс.</b><span>подписчиков с нуля</span></div>
-          <div class="kpi"><b>×57</b><span>среднемесячный охват: 15 000 → 855 000</span></div>
           <div class="kpi"><b>+25 890</b><span>подписчиков за конкурс</span></div>
-          <a class="kpi kpi-link" href="https://tagline.ru/fragency/cases/prilozhenie--koshelek--v-telegram/" target="_blank" rel="noopener"><b>Бронза</b><span>Tagline Awards 2023 ↗</span></a>
           <div class="mini" data-b="15000" data-a="855000"><div class="mini-head"><span>Среднемесячный охват соцсетей</span><b>×57</b></div><div class="mini-row"><small>Было</small><div class="mini-track"><div class="bar">15 000</div></div></div><div class="mini-row"><small>Стало</small><div class="mini-track"><div class="bar after">855 000</div></div></div></div>
         </div>
       </article>
